@@ -1,1 +1,139 @@
+*{
+  box-sizing:border-box;
+}
 
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#020617;
+  color:white;
+}
+
+.login-shell{
+  min-height:100vh;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at top,#0f172a 0%,#020617 45%,#000 100%);
+}
+
+.hero-banner{
+  width:100%;
+  max-width:1200px;
+  border-radius:26px;
+  overflow:hidden;
+  border:2px solid rgba(250,204,21,.25);
+  box-shadow:
+    0 0 40px rgba(34,197,94,.25),
+    0 0 90px rgba(14,165,233,.18);
+}
+
+.hero-banner img{
+  width:100%;
+  display:block;
+}
+
+.login-card{
+  width:min(540px,100%);
+  margin-top:-45px;
+  padding:34px;
+  border-radius:28px;
+  text-align:center;
+  position:relative;
+  z-index:5;
+  background:linear-gradient(180deg,rgba(15,23,42,.96),rgba(2,6,23,.98));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 20px 55px rgba(0,0,0,.65);
+}
+
+.lock-icon{
+  font-size:58px;
+  margin-bottom:12px;
+}
+
+h1{
+  font-size:clamp(36px,8vw,54px);
+  margin:0 0 12px;
+  font-weight:900;
+}
+
+.sub{
+  font-size:20px;
+  color:#cbd5e1;
+  line-height:1.5;
+  margin-bottom:24px;
+}
+
+.jamal-status{
+  padding:18px;
+  border-radius:18px;
+  font-size:20px;
+  font-weight:900;
+  background:linear-gradient(135deg,#22c55e,#0ea5e9);
+  margin-bottom:22px;
+  animation:pulseGlow 1.8s infinite;
+}
+
+input{
+  width:100%;
+  padding:18px;
+  margin:10px 0;
+  border:none;
+  border-radius:16px;
+  font-size:18px;
+  outline:none;
+}
+
+button{
+  width:100%;
+  padding:18px;
+  margin-top:14px;
+  border:none;
+  border-radius:18px;
+  font-size:21px;
+  font-weight:900;
+  color:white;
+  cursor:pointer;
+}
+
+.unlock-btn{
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  box-shadow:0 0 26px rgba(34,197,94,.35);
+}
+
+.jamal-btn{
+  background:linear-gradient(135deg,#2563eb,#0ea5e9);
+}
+
+.small-note{
+  margin-top:18px;
+  font-size:14px;
+  color:#94a3b8;
+}
+
+@keyframes pulseGlow{
+  0%{box-shadow:0 0 12px rgba(34,197,94,.35)}
+  50%{box-shadow:0 0 34px rgba(14,165,233,.85)}
+  100%{box-shadow:0 0 12px rgba(34,197,94,.35)}
+}
+
+@media(max-width:700px){
+  .login-shell{
+    padding:14px;
+    justify-content:flex-start;
+  }
+
+  .login-card{
+    margin-top:-20px;
+    padding:24px;
+  }
+
+  .sub{
+    font-size:18px;
+  }
+}
